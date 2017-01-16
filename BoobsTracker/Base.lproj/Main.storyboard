@@ -23,12 +23,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAX-fx-hQg" userLabel="RightButton">
-                                <rect key="frame" x="239" y="198.5" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAX-fx-hQg" userLabel="RightButton" customClass="RoundButton" customModule="BoobsTracker" customModuleProvider="target">
+                                <rect key="frame" x="219" y="188.5" width="90" height="90"/>
                                 <color key="backgroundColor" red="0.66138150685809438" green="0.32578293228808536" blue="0.24771690059950144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="BSI-BJ-Vof"/>
-                                    <constraint firstAttribute="height" constant="70" id="ypK-aI-O9i"/>
+                                    <constraint firstAttribute="width" constant="90" id="BSI-BJ-Vof"/>
+                                    <constraint firstAttribute="height" constant="90" id="ypK-aI-O9i"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <state key="normal" title="Right">
@@ -39,12 +39,12 @@
                                     <action selector="rightBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rTg-H6-OMG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qp-Nv-VCb" userLabel="LeftButton">
-                                <rect key="frame" x="66" y="198.5" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qp-Nv-VCb" userLabel="LeftButton" customClass="RoundButton" customModule="BoobsTracker" customModuleProvider="target">
+                                <rect key="frame" x="66" y="188.5" width="90" height="90"/>
                                 <color key="backgroundColor" red="0.4748148011576665" green="0.46852566232984533" blue="0.6782411247337421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="Cyz-6C-HRH"/>
-                                    <constraint firstAttribute="width" constant="70" id="ExY-Qy-hTZ"/>
+                                    <constraint firstAttribute="height" constant="90" id="Cyz-6C-HRH"/>
+                                    <constraint firstAttribute="width" constant="90" id="ExY-Qy-hTZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <state key="normal" title="Left">
@@ -54,8 +54,8 @@
                                     <action selector="leftBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gzC-bH-zkh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is just some line of text" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnl-si-Sso" userLabel="LastTimeLabel">
-                                <rect key="frame" x="94" y="350" width="187.5" height="200.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No activity data yet" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnl-si-Sso" userLabel="LastTimeLabel">
+                                <rect key="frame" x="37.5" y="350" width="300" height="200.5"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -68,12 +68,12 @@
                             <constraint firstItem="tnl-si-Sso" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ecM-Sd-7Sa"/>
                             <constraint firstItem="1Qp-Nv-VCb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="gpI-sA-pHP"/>
                             <constraint firstItem="WAX-fx-hQg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.7" id="hAX-yI-bZZ"/>
-                            <constraint firstItem="tnl-si-Sso" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="hgm-5Z-Iyq"/>
+                            <constraint firstItem="tnl-si-Sso" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="hgm-5Z-Iyq"/>
                             <constraint firstItem="tnl-si-Sso" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="j6g-lW-T8J"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Boobs tracker" id="haX-ZV-jKh">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="X84-XA-y0Y">
+                        <barButtonItem key="leftBarButtonItem" id="X84-XA-y0Y">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="3GM-IS-jFy">
                                 <rect key="frame" x="16" y="11" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -88,27 +88,45 @@
                     </navigationItem>
                     <connections>
                         <outlet property="lastTimeLabel" destination="tnl-si-Sso" id="3FI-22-LeI"/>
+                        <outlet property="leftButton" destination="1Qp-Nv-VCb" id="48v-sZ-5Dv"/>
+                        <outlet property="rightButton" destination="WAX-fx-hQg" id="atw-p5-OlR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="975" y="788"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Activity List View Controller-->
         <scene sceneID="h3U-4o-EiD">
             <objects>
-                <tableViewController id="Cuu-Rr-NXz" sceneMemberID="viewController">
+                <tableViewController id="Cuu-Rr-NXz" customClass="ActivityListViewController" customModule="BoobsTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Eox-Vt-6lB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="P5B-Kh-Fzt">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedRecordTableCell" textLabel="SMq-O7-QIK" detailTextLabel="vLo-l7-yY5" style="IBUITableViewCellStyleValue1" id="P5B-Kh-Fzt" userLabel="FeedRecordTableCell">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P5B-Kh-Fzt" id="whg-ZE-nqV">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SMq-O7-QIK">
+                                            <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vLo-l7-yY5">
+                                            <rect key="frame" x="316" y="12" width="44" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
