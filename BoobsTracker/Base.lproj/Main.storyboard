@@ -77,6 +77,9 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="3GM-IS-jFy">
                                 <rect key="frame" x="16" y="11" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onInfoClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CyY-Io-zCJ"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="0kI-ps-mYs">
@@ -106,7 +109,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedRecordTableCell" textLabel="SMq-O7-QIK" detailTextLabel="vLo-l7-yY5" style="IBUITableViewCellStyleValue1" id="P5B-Kh-Fzt" userLabel="FeedRecordTableCell">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P5B-Kh-Fzt" id="whg-ZE-nqV">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
