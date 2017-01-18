@@ -161,32 +161,6 @@ class RecordViewController : UIViewController
         
         alertController.addAction(cancelAction)
         self.present(alertController, animated: true, completion: nil)
-        
-        
-        /*
-         guard (self.alertController == nil) else {
-         print("Alert already displayed")
-         return
-         }
-         
-         self.baseMessage = message
-         self.remainingTime = time
-         
-         self.alertController = UIAlertController(title: title, message: self.alertMessage(), preferredStyle: .Alert)
-         
-         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
-         print("Alert was cancelled")
-         self.alertController=nil;
-         self.alertTimer?.invalidate()
-         self.alertTimer=nil
-         }
-         
-         self.alertController!.addAction(cancelAction)
-         
-         self.alertTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ViewController.countDown), userInfo: nil, repeats: true)
-         
-         self.presentViewController(self.alertController!, animated: true, completion: nil)
-        */
     }
     
     private func queryLastFeed()

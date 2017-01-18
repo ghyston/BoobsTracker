@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>BoobsTrackerTodayWidget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>3F21C27D1E2F98300018E4C6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3FF9C5A41E2B815A00608747</key>
 		<dict>
 			<key>primary</key>

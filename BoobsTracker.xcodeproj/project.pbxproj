@@ -12,6 +12,11 @@
 		3F21C2731E2D78E60018E4C6 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21C2721E2D78E60018E4C6 /* RoundButton.swift */; };
 		3F21C2781E2F6FE30018E4C6 /* FeedRecord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21C2761E2F6FE30018E4C6 /* FeedRecord+CoreDataClass.swift */; };
 		3F21C2791E2F6FE30018E4C6 /* FeedRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21C2771E2F6FE30018E4C6 /* FeedRecord+CoreDataProperties.swift */; };
+		3F21C2811E2F98300018E4C6 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F21C2801E2F98300018E4C6 /* NotificationCenter.framework */; };
+		3F21C2841E2F98300018E4C6 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21C2831E2F98300018E4C6 /* TodayViewController.swift */; };
+		3F21C2871E2F98300018E4C6 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F21C2851E2F98300018E4C6 /* MainInterface.storyboard */; };
+		3F21C28B1E2F98300018E4C6 /* BoobsTrackerTodayWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3F21C27E1E2F98300018E4C6 /* BoobsTrackerTodayWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3F21C2941E2F9CE00018E4C6 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21C2721E2D78E60018E4C6 /* RoundButton.swift */; };
 		3FF9C5A91E2B815A00608747 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF9C5A81E2B815A00608747 /* AppDelegate.swift */; };
 		3FF9C5AE1E2B815A00608747 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF9C5AC1E2B815A00608747 /* Main.storyboard */; };
 		3FF9C5B01E2B815A00608747 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FF9C5AF1E2B815A00608747 /* Assets.xcassets */; };
@@ -24,6 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3F21C2891E2F98300018E4C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FF9C59D1E2B815A00608747 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F21C27D1E2F98300018E4C6;
+			remoteInfo = BoobsTrackerTodayWidget;
+		};
 		3FF9C5BA1E2B815B00608747 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3FF9C59D1E2B815A00608747 /* Project object */;
@@ -40,12 +52,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3F21C28F1E2F98300018E4C6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3F21C28B1E2F98300018E4C6 /* BoobsTrackerTodayWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3F21C26E1E2CD2910018E4C6 /* ActivityListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityListViewController.swift; sourceTree = "<group>"; };
 		3F21C2701E2CD48A0018E4C6 /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewController.swift; sourceTree = "<group>"; };
 		3F21C2721E2D78E60018E4C6 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		3F21C2761E2F6FE30018E4C6 /* FeedRecord+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FeedRecord+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3F21C2771E2F6FE30018E4C6 /* FeedRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FeedRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3F21C27E1E2F98300018E4C6 /* BoobsTrackerTodayWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BoobsTrackerTodayWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F21C2801E2F98300018E4C6 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		3F21C2831E2F98300018E4C6 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		3F21C2861E2F98300018E4C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		3F21C2881E2F98300018E4C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FF9C5A51E2B815A00608747 /* BoobsTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoobsTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF9C5A81E2B815A00608747 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FF9C5AD1E2B815A00608747 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,6 +95,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3F21C27B1E2F98300018E4C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F21C2811E2F98300018E4C6 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3FF9C5A21E2B815A00608747 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -88,12 +127,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F21C27F1E2F98300018E4C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F21C2801E2F98300018E4C6 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F21C2821E2F98300018E4C6 /* BoobsTrackerTodayWidget */ = {
+			isa = PBXGroup;
+			children = (
+				3F21C2831E2F98300018E4C6 /* TodayViewController.swift */,
+				3F21C2851E2F98300018E4C6 /* MainInterface.storyboard */,
+				3F21C2881E2F98300018E4C6 /* Info.plist */,
+			);
+			path = BoobsTrackerTodayWidget;
+			sourceTree = "<group>";
+		};
 		3FF9C59C1E2B815A00608747 = {
 			isa = PBXGroup;
 			children = (
 				3FF9C5A71E2B815A00608747 /* BoobsTracker */,
 				3FF9C5BC1E2B815B00608747 /* BoobsTrackerTests */,
 				3FF9C5C71E2B815B00608747 /* BoobsTrackerUITests */,
+				3F21C2821E2F98300018E4C6 /* BoobsTrackerTodayWidget */,
+				3F21C27F1E2F98300018E4C6 /* Frameworks */,
 				3FF9C5A61E2B815A00608747 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +163,7 @@
 				3FF9C5A51E2B815A00608747 /* BoobsTracker.app */,
 				3FF9C5B91E2B815B00608747 /* BoobsTrackerTests.xctest */,
 				3FF9C5C41E2B815B00608747 /* BoobsTrackerUITests.xctest */,
+				3F21C27E1E2F98300018E4C6 /* BoobsTrackerTodayWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,6 +225,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3F21C27D1E2F98300018E4C6 /* BoobsTrackerTodayWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F21C28C1E2F98300018E4C6 /* Build configuration list for PBXNativeTarget "BoobsTrackerTodayWidget" */;
+			buildPhases = (
+				3F21C27A1E2F98300018E4C6 /* Sources */,
+				3F21C27B1E2F98300018E4C6 /* Frameworks */,
+				3F21C27C1E2F98300018E4C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BoobsTrackerTodayWidget;
+			productName = BoobsTrackerTodayWidget;
+			productReference = 3F21C27E1E2F98300018E4C6 /* BoobsTrackerTodayWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		3FF9C5A41E2B815A00608747 /* BoobsTracker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FF9C5CD1E2B815B00608747 /* Build configuration list for PBXNativeTarget "BoobsTracker" */;
@@ -172,10 +249,12 @@
 				3FF9C5A11E2B815A00608747 /* Sources */,
 				3FF9C5A21E2B815A00608747 /* Frameworks */,
 				3FF9C5A31E2B815A00608747 /* Resources */,
+				3F21C28F1E2F98300018E4C6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3F21C28A1E2F98300018E4C6 /* PBXTargetDependency */,
 			);
 			name = BoobsTracker;
 			productName = BoobsTracker;
@@ -228,6 +307,11 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Ilja Stepanow";
 				TargetAttributes = {
+					3F21C27D1E2F98300018E4C6 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = AU77L4BHS3;
+						ProvisioningStyle = Automatic;
+					};
 					3FF9C5A41E2B815A00608747 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = AU77L4BHS3;
@@ -261,11 +345,20 @@
 				3FF9C5A41E2B815A00608747 /* BoobsTracker */,
 				3FF9C5B81E2B815B00608747 /* BoobsTrackerTests */,
 				3FF9C5C31E2B815B00608747 /* BoobsTrackerUITests */,
+				3F21C27D1E2F98300018E4C6 /* BoobsTrackerTodayWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3F21C27C1E2F98300018E4C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F21C2871E2F98300018E4C6 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3FF9C5A31E2B815A00608747 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -293,6 +386,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3F21C27A1E2F98300018E4C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F21C2941E2F9CE00018E4C6 /* RoundButton.swift in Sources */,
+				3F21C2841E2F98300018E4C6 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3FF9C5A11E2B815A00608747 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -328,6 +430,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3F21C28A1E2F98300018E4C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F21C27D1E2F98300018E4C6 /* BoobsTrackerTodayWidget */;
+			targetProxy = 3F21C2891E2F98300018E4C6 /* PBXContainerItemProxy */;
+		};
 		3FF9C5BB1E2B815B00608747 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3FF9C5A41E2B815A00608747 /* BoobsTracker */;
@@ -341,6 +448,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3F21C2851E2F98300018E4C6 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F21C2861E2F98300018E4C6 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		3FF9C5AC1E2B815A00608747 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -360,6 +475,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3F21C28D1E2F98300018E4C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = AU77L4BHS3;
+				INFOPLIST_FILE = BoobsTrackerTodayWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hyston.ios.BoobsTracker.BoobsTrackerTodayWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3F21C28E1E2F98300018E4C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = AU77L4BHS3;
+				INFOPLIST_FILE = BoobsTrackerTodayWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hyston.ios.BoobsTracker.BoobsTrackerTodayWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		3FF9C5CB1E2B815B00608747 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -454,6 +595,7 @@
 		3FF9C5CE1E2B815B00608747 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AU77L4BHS3;
 				INFOPLIST_FILE = BoobsTracker/Info.plist;
@@ -468,6 +610,7 @@
 		3FF9C5CF1E2B815B00608747 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AU77L4BHS3;
 				INFOPLIST_FILE = BoobsTracker/Info.plist;
@@ -536,6 +679,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3F21C28C1E2F98300018E4C6 /* Build configuration list for PBXNativeTarget "BoobsTrackerTodayWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F21C28D1E2F98300018E4C6 /* Debug */,
+				3F21C28E1E2F98300018E4C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		3FF9C5A01E2B815A00608747 /* Build configuration list for PBXProject "BoobsTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
