@@ -23,12 +23,17 @@ class ActivityListViewController : CoreDataTableViewController
         
         // Create a fetchrequest
         let fr = NSFetchRequest<NSFetchRequestResult>(entityName: "FeedRecord")
-        fr.sortDescriptors = [NSSortDescriptor(key: "feedTime", ascending: false)]
         
-        //@todo: limit for last 24 hours!
+        fr.sortDescriptors = [
+            NSSortDescriptor(key: "feedTime", ascending: false)]
         
         // Create the FetchedResultsController
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: fr, managedObjectContext: stack.context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: fr, managedObjectContext: stack.context, sectionNameKeyPath: "sectionIdentifier", cacheName: nil)
+    }
+    
+    //@note: this hides section index (quick selector from the right side of table)
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return nil
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -42,8 +47,8 @@ class ActivityListViewController : CoreDataTableViewController
         // Sync notebook -> cell
         cell.textLabel?.text = DateFormatter.localizedString(
             from: feedRecord.feedTime as! Date,
-            dateStyle: DateFormatter.Style.medium,
-            timeStyle: DateFormatter.Style.medium)
+            dateStyle: DateFormatter.Style.none,
+            timeStyle: DateFormatter.Style.short)
         
         let leftColor = UIColor(red: 0.47, green: 0.46, blue: 0.67, alpha: 1.0)
         let rightColor = UIColor(red: 0.69, green: 0.33, blue: 0.26, alpha: 1.0)

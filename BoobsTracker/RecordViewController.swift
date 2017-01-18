@@ -82,6 +82,12 @@ class RecordViewController : UIViewController
     
     func updateLabel()
     {
+        if(lastFeed == nil)
+        {
+            lastTimeLabel.text = "No record data yet"
+            return
+        }
+        
         let diff : TimeInterval = NSDate ().timeIntervalSince(lastFeed.feedTime as! Date)
         
         let boldAttr = UIFont.boldSystemFont(ofSize: 17)
