@@ -12,6 +12,8 @@ import CoreData
 
 struct CoreDataStack {
     
+    static var shared = CoreDataStack(modelName: "Model")!
+    
     // MARK: Properties
     
     let model: NSManagedObjectModel
@@ -26,7 +28,7 @@ struct CoreDataStack {
         
         // Assumes the model is in the main bundle
         guard let modelURL = Bundle.main.url(forResource: modelName, withExtension: "momd") else {
-            print("Unable to find \(modelName)in the main bundle")
+            print("Unable to find \(modelName) in the main bundle")
             return nil
         }
         self.modelURL = modelURL
@@ -48,7 +50,10 @@ struct CoreDataStack {
         // Add a SQLite store located in the documents folder
         let fm = FileManager.default
         
-        guard let docUrl = fm.urls(for: .documentDirectory, in: .userDomainMask).first else {
+        //fm.containerURL(forSecurityApplicationGroupIdentifier: "hyston.ios.BoobsTracker")
+        
+        //guard let docUrl = fm.urls(for: .documentDirectory, in: .userDomainMask).first else {
+        guard let docUrl = fm.containerURL(forSecurityApplicationGroupIdentifier: "group.hyston.ios.BoobsTracker") else {
             print("Unable to reach the documents folder")
             return nil
         }

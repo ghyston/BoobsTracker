@@ -18,8 +18,8 @@ class ActivityListViewController : CoreDataTableViewController
         title = "Recent activity"
         
         // Get the stack
-        let delegate = UIApplication.shared.delegate as! AppDelegate
-        let stack = delegate.stack
+        //let delegate = UIApplication.shared.delegate as! AppDelegate
+        let stack = CoreDataStack.shared// delegate.stack
         
         // Create a fetchrequest
         let fr = NSFetchRequest<NSFetchRequestResult>(entityName: "FeedRecord")

@@ -10,8 +10,26 @@ import UIKit
 import NotificationCenter
 import CoreData
 
-class TodayViewController: UIViewController, NCWidgetProviding {
-        
+class TodayViewController: UIViewController, NCWidgetProviding, FeedRecorder {
+    
+    @IBOutlet weak var lastRecordLabel: UILabel!
+    
+    @IBAction func onLeftCLick(_ sender: Any)
+    {
+        saveRecord(isLeft: true)
+    }
+    
+    @IBAction func onRightClick(_ sender: Any)
+    {
+        saveRecord(isLeft: false)
+    }
+    
+    var lastFeed : FeedRecord! = nil
+        {
+        didSet{
+            updateLabel()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         queryLastFeed()
@@ -29,13 +47,15 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // If there's no update required, use NCUpdateResult.NoData
         // If there's an update, use NCUpdateResult.NewData
         
+        print("widgetPerformUpdate")
+        
         completionHandler(NCUpdateResult.newData)
     }
     
     private func queryLastFeed()
     {
-        /*let app = UIApplication.shared.delegate as! AppDelegate
-        let stack = app.stack
+        
+        let stack = CoreDataStack.shared
         
         let fr = NSFetchRequest<NSFetchRequestResult>(entityName: "FeedRecord")
         fr.sortDescriptors = [NSSortDescriptor(key: "feedTime", ascending: false)]
@@ -48,8 +68,23 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         catch
         {
             print ("Exception during perform fetching")
-            
-        }*/
+        }
+    }
+    
+    func updateLabel()
+    {
+        updateLabel(lastFeed: lastFeed, label: lastRecordLabel)
+    }
+    
+    private func saveRecord(isLeft : Bool)
+    {
+        let stack = CoreDataStack.shared
+        self.lastFeed = FeedRecord(isLeft: isLeft, context: stack.context)
+        do {
+            try stack.saveContext()
+        } catch {
+            print("Error while autosaving")
+        }
     }
     
 }

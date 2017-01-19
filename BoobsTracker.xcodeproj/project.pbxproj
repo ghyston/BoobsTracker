@@ -17,6 +17,18 @@
 		3F21C2871E2F98300018E4C6 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F21C2851E2F98300018E4C6 /* MainInterface.storyboard */; };
 		3F21C28B1E2F98300018E4C6 /* BoobsTrackerTodayWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3F21C27E1E2F98300018E4C6 /* BoobsTrackerTodayWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3F21C2941E2F9CE00018E4C6 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21C2721E2D78E60018E4C6 /* RoundButton.swift */; };
+		3F21C2951E2FD4B40018E4C6 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFEBB331E2BA92A004F737A /* CoreDataStack.swift */; };
+		3F21C2961E2FD4DB0018E4C6 /* FeedRecord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21C2761E2F6FE30018E4C6 /* FeedRecord+CoreDataClass.swift */; };
+		3F21C2971E2FD4DB0018E4C6 /* FeedRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21C2771E2F6FE30018E4C6 /* FeedRecord+CoreDataProperties.swift */; };
+		3F21C2981E2FD5CE0018E4C6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FFEBB2F1E2BA831004F737A /* Model.xcdatamodeld */; };
+		3FE7468E1E30260700AE1FEC /* FeedRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7468D1E30260700AE1FEC /* FeedRecorder.swift */; };
+		3FE7468F1E30260700AE1FEC /* FeedRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7468D1E30260700AE1FEC /* FeedRecorder.swift */; };
+		3FE746941E30BBEB00AE1FEC /* Launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE746911E30BBEB00AE1FEC /* Launch.png */; };
+		3FE746951E30BBEB00AE1FEC /* Launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE746911E30BBEB00AE1FEC /* Launch.png */; };
+		3FE746961E30BBEB00AE1FEC /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE746921E30BBEB00AE1FEC /* Icon-60@3x.png */; };
+		3FE746971E30BBEB00AE1FEC /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE746921E30BBEB00AE1FEC /* Icon-60@3x.png */; };
+		3FE746981E30BBEB00AE1FEC /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE746931E30BBEB00AE1FEC /* Icon-60@2x.png */; };
+		3FE746991E30BBEB00AE1FEC /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE746931E30BBEB00AE1FEC /* Icon-60@2x.png */; };
 		3FF9C5A91E2B815A00608747 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF9C5A81E2B815A00608747 /* AppDelegate.swift */; };
 		3FF9C5AE1E2B815A00608747 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF9C5AC1E2B815A00608747 /* Main.storyboard */; };
 		3FF9C5B01E2B815A00608747 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FF9C5AF1E2B815A00608747 /* Assets.xcassets */; };
@@ -77,6 +89,12 @@
 		3F21C2831E2F98300018E4C6 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		3F21C2861E2F98300018E4C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		3F21C2881E2F98300018E4C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F21C2991E2FD6D50018E4C6 /* BoobsTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BoobsTracker.entitlements; sourceTree = "<group>"; };
+		3F21C29A1E2FD6DB0018E4C6 /* BoobsTrackerTodayWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BoobsTrackerTodayWidget.entitlements; sourceTree = "<group>"; };
+		3FE7468D1E30260700AE1FEC /* FeedRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedRecorder.swift; sourceTree = "<group>"; };
+		3FE746911E30BBEB00AE1FEC /* Launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Launch.png; path = Resourses/Launch.png; sourceTree = "<group>"; };
+		3FE746921E30BBEB00AE1FEC /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@3x.png"; path = "Resourses/Icon-60@3x.png"; sourceTree = "<group>"; };
+		3FE746931E30BBEB00AE1FEC /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "Resourses/Icon-60@2x.png"; sourceTree = "<group>"; };
 		3FF9C5A51E2B815A00608747 /* BoobsTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoobsTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF9C5A81E2B815A00608747 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FF9C5AD1E2B815A00608747 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,6 +156,7 @@
 		3F21C2821E2F98300018E4C6 /* BoobsTrackerTodayWidget */ = {
 			isa = PBXGroup;
 			children = (
+				3F21C29A1E2FD6DB0018E4C6 /* BoobsTrackerTodayWidget.entitlements */,
 				3F21C2831E2F98300018E4C6 /* TodayViewController.swift */,
 				3F21C2851E2F98300018E4C6 /* MainInterface.storyboard */,
 				3F21C2881E2F98300018E4C6 /* Info.plist */,
@@ -145,9 +164,20 @@
 			path = BoobsTrackerTodayWidget;
 			sourceTree = "<group>";
 		};
+		3FE746901E30BBDA00AE1FEC /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				3FE746911E30BBEB00AE1FEC /* Launch.png */,
+				3FE746921E30BBEB00AE1FEC /* Icon-60@3x.png */,
+				3FE746931E30BBEB00AE1FEC /* Icon-60@2x.png */,
+			);
+			name = Resourses;
+			sourceTree = "<group>";
+		};
 		3FF9C59C1E2B815A00608747 = {
 			isa = PBXGroup;
 			children = (
+				3FE746901E30BBDA00AE1FEC /* Resourses */,
 				3FF9C5A71E2B815A00608747 /* BoobsTracker */,
 				3FF9C5BC1E2B815B00608747 /* BoobsTrackerTests */,
 				3FF9C5C71E2B815B00608747 /* BoobsTrackerUITests */,
@@ -171,9 +201,11 @@
 		3FF9C5A71E2B815A00608747 /* BoobsTracker */ = {
 			isa = PBXGroup;
 			children = (
+				3F21C2991E2FD6D50018E4C6 /* BoobsTracker.entitlements */,
 				3FFEBB321E2BA8D1004F737A /* Model */,
 				3FF9C5D61E2B8D0700608747 /* ViewControllers */,
 				3FF9C5A81E2B815A00608747 /* AppDelegate.swift */,
+				3FE7468D1E30260700AE1FEC /* FeedRecorder.swift */,
 				3FF9C5AF1E2B815A00608747 /* Assets.xcassets */,
 				3FF9C5B41E2B815A00608747 /* Info.plist */,
 			);
@@ -311,11 +343,21 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = AU77L4BHS3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					3FF9C5A41E2B815A00608747 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = AU77L4BHS3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					3FF9C5B81E2B815B00608747 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -355,7 +397,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE746971E30BBEB00AE1FEC /* Icon-60@3x.png in Resources */,
+				3FE746951E30BBEB00AE1FEC /* Launch.png in Resources */,
 				3F21C2871E2F98300018E4C6 /* MainInterface.storyboard in Resources */,
+				3FE746991E30BBEB00AE1FEC /* Icon-60@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,9 +408,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE746941E30BBEB00AE1FEC /* Launch.png in Resources */,
+				3FE746961E30BBEB00AE1FEC /* Icon-60@3x.png in Resources */,
 				3FF9C5B31E2B815A00608747 /* LaunchScreen.storyboard in Resources */,
 				3FF9C5B01E2B815A00608747 /* Assets.xcassets in Resources */,
 				3FF9C5AE1E2B815A00608747 /* Main.storyboard in Resources */,
+				3FE746981E30BBEB00AE1FEC /* Icon-60@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,8 +438,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F21C2971E2FD4DB0018E4C6 /* FeedRecord+CoreDataProperties.swift in Sources */,
+				3F21C2961E2FD4DB0018E4C6 /* FeedRecord+CoreDataClass.swift in Sources */,
+				3F21C2951E2FD4B40018E4C6 /* CoreDataStack.swift in Sources */,
 				3F21C2941E2F9CE00018E4C6 /* RoundButton.swift in Sources */,
 				3F21C2841E2F98300018E4C6 /* TodayViewController.swift in Sources */,
+				3F21C2981E2FD5CE0018E4C6 /* Model.xcdatamodeld in Sources */,
+				3FE7468F1E30260700AE1FEC /* FeedRecorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +461,7 @@
 				3FF9C5A91E2B815A00608747 /* AppDelegate.swift in Sources */,
 				3FFEBB311E2BA831004F737A /* Model.xcdatamodeld in Sources */,
 				3FFEBB341E2BA92A004F737A /* CoreDataStack.swift in Sources */,
+				3FE7468E1E30260700AE1FEC /* FeedRecorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,8 +532,10 @@
 		3F21C28D1E2F98300018E4C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = BoobsTrackerTodayWidget/BoobsTrackerTodayWidget.entitlements;
 				DEVELOPMENT_TEAM = AU77L4BHS3;
 				INFOPLIST_FILE = BoobsTrackerTodayWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hyston.ios.BoobsTracker.BoobsTrackerTodayWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -491,8 +547,10 @@
 		3F21C28E1E2F98300018E4C6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = BoobsTrackerTodayWidget/BoobsTrackerTodayWidget.entitlements;
 				DEVELOPMENT_TEAM = AU77L4BHS3;
 				INFOPLIST_FILE = BoobsTrackerTodayWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hyston.ios.BoobsTracker.BoobsTrackerTodayWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -597,6 +655,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BoobsTracker/BoobsTracker.entitlements;
 				DEVELOPMENT_TEAM = AU77L4BHS3;
 				INFOPLIST_FILE = BoobsTracker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -612,6 +671,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BoobsTracker/BoobsTracker.entitlements;
 				DEVELOPMENT_TEAM = AU77L4BHS3;
 				INFOPLIST_FILE = BoobsTracker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -686,6 +746,7 @@
 				3F21C28E1E2F98300018E4C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FF9C5A01E2B815A00608747 /* Build configuration list for PBXProject "BoobsTracker" */ = {
 			isa = XCConfigurationList;

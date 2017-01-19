@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class RecordViewController : UIViewController
+class RecordViewController : UIViewController, FeedRecorder
 {
     
     @IBOutlet weak var leftButton: UIButton!
@@ -44,100 +44,52 @@ class RecordViewController : UIViewController
     @IBAction func leftBtnClick(_ sender: Any)
     {
         saveRecord(isLeft: true)
+        fadeInLabel()
     }
     
     @IBAction func rightBtnClick(_ sender: Any)
     {
         saveRecord(isLeft: false)
+        fadeInLabel()
+    }
+    
+    private func fadeInLabel()
+    {
+        lastTimeLabel.alpha = 0;
+        UIView.animate(withDuration: 0.5, animations: {
+            self.lastTimeLabel.alpha = 1.0
+        })
+        
+        /*
+         UIView.animate(withDuration: 0.5, delay: 0.3, options: [.repeat, .curveEaseOut, .autoreverse], animations: {
+         self.username.center.x += self.view.bounds.width
+         }, completion: nil)
+         })
+         
+         
+        labelMain.alpha = 0;
+        
+        [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseIn
+            animations:^{ labelMain.alpha = 1;}
+            completion:nil];*/
     }
     
     private func saveRecord(isLeft : Bool)
     {
-        let app = UIApplication.shared.delegate as! AppDelegate
-        let stack = app.stack
+        let stack = CoreDataStack.shared
         self.lastFeed = FeedRecord(isLeft: isLeft, context: stack.context)
         do {
             try stack.saveContext()
         } catch {
             print("Error while autosaving")
         }
-        //disableButtons()
     }
-    
-    /*private func disableButtons()
-    {
-        leftButton.isHidden = true
-        rightButton.isHidden = true
-        
-        let time = DispatchTime.now() + .seconds(5)
-        DispatchQueue.main.asyncAfter(deadline: time) {
-            self.enableButtons()
-        }
-    }
-    
-    private func enableButtons()
-    {
-        leftButton.isHidden = false
-        rightButton.isHidden = false
-    }*/
     
     func updateLabel()
     {
-        if(lastFeed == nil)
-        {
-            lastTimeLabel.text = "No record data yet"
-            return
-        }
-        
-        let diff : TimeInterval = NSDate ().timeIntervalSince(lastFeed.feedTime as! Date)
-        
-        let boldAttr = UIFont.boldSystemFont(ofSize: 17)
-        
-        //@todo: copypaster in storyboard & ActivityListViewController
-        let leftColor = UIColor(red: 0.47, green: 0.46, blue: 0.67, alpha: 1.0)
-        let rightColor = UIColor(red: 0.69, green: 0.33, blue: 0.26, alpha: 1.0)
-        
-        let normalTextAttributes = [NSForegroundColorAttributeName: UIColor.black, NSFontAttributeName: UIFont.systemFont(ofSize: 15)]
-        let timeAttributes = [NSForegroundColorAttributeName: UIColor.orange, NSFontAttributeName: boldAttr]
-        let leftAttributes = [NSForegroundColorAttributeName: leftColor, NSFontAttributeName: boldAttr]
-        let rightAttributes = [NSForegroundColorAttributeName: rightColor, NSFontAttributeName: boldAttr]
-        
-        let part1 = NSMutableAttributedString(string: "Last feed was ", attributes: normalTextAttributes)
-        let part2 = NSMutableAttributedString(string: stringFromTimeInterval(diff), attributes: timeAttributes)
-        let part3 = NSMutableAttributedString(string: " ago with ", attributes: normalTextAttributes)
-        
-        let part4 = lastFeed.isLeft ?
-        NSMutableAttributedString(string: "L", attributes: leftAttributes) :
-        NSMutableAttributedString(string: "R", attributes: rightAttributes)
-        
-        let combination = NSMutableAttributedString()
-        
-        combination.append(part1)
-        combination.append(part2)
-        combination.append(part3)
-        combination.append(part4)
-        
-        lastTimeLabel.attributedText = combination
-        
+        updateLabel(lastFeed: lastFeed, label: lastTimeLabel)
     }
-    
-    private func stringFromTimeInterval(_ interval: TimeInterval) -> String
-    {
-        let ti = NSInteger(interval)
-        
-        let minutes = (ti / 60) % 60
-        let hours = (ti / 3600)
-        
-        if hours > 0
-        {
-            return String(format: "%dh %0.2dm",hours,minutes)
-        }
-        else
-        {
-            return String(format: "%dm", minutes)
-        }
-    }
-    
+       
     @IBAction func onInfoClick(_ sender: Any)
     {
         var infoText : String = "Created by Hyston \nto his lovely wife Daria"
@@ -165,8 +117,7 @@ class RecordViewController : UIViewController
     
     private func queryLastFeed()
     {
-        let app = UIApplication.shared.delegate as! AppDelegate
-        let stack = app.stack
+        let stack = CoreDataStack.shared
         
         let fr = NSFetchRequest<NSFetchRequestResult>(entityName: "FeedRecord")
         fr.sortDescriptors = [NSSortDescriptor(key: "feedTime", ascending: false)]
